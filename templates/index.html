@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Research Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask Your Research Assistant</h1>
+        <form method="POST">
+            <input type="text" name="query" placeholder="Enter your query here..." required>
+            <button type="submit">Search & Summarize</button>
+        </form>
+        {% if summary %}
+        <div class="result">
+            <h2>Summary:</h2>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
